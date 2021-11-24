@@ -7,8 +7,9 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "categoria")
+@Table(name = "categorias")
 public class Categoria {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -18,17 +19,14 @@ public class Categoria {
 	}
 	
 	public Categoria(String nome) {
-		this.setNome(nome);
+		this.nome = nome;
 	}
 
 	public String getNome() {
 		return nome;
 	}
-
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
-	
-	
+
 }
