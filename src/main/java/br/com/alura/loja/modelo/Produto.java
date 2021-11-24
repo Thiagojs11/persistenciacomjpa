@@ -4,12 +4,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.MapKeyEnumerated;
 import javax.persistence.Table;
 
 @Entity
@@ -28,9 +26,8 @@ public class Produto {
 	private Categoria categoria;
 	
 	public Produto() {
-		
 	}
-
+	
 	public Produto(String nome, String descricao, BigDecimal preco, Categoria categoria) {
 		this.nome = nome;
 		this.descricao = descricao;
