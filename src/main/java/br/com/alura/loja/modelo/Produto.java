@@ -8,6 +8,7 @@ import javax.persistence.EnumType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.MapKeyEnumerated;
 import javax.persistence.Table;
 
@@ -21,8 +22,9 @@ public class Produto {
 	private String nome;
 	private String descricao;
 	private BigDecimal preco;
-	private LocalDate dataCadastro = LocalDate.now();		
-	@MapKeyEnumerated(EnumType.STRING)
+	private LocalDate dataCadastro = LocalDate.now();
+	
+	@ManyToOne
 	private Categoria categoria;
 	
 	
